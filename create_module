@@ -59,4 +59,7 @@ then
 	echo -e $header > "$path/$1.py"
 fi
 
-add_import $path "from $1 import *"
+if [ $1 != "__main__" ]
+then
+	add_import $path "from $1 import *"
+fi
