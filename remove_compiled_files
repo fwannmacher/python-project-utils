@@ -1,0 +1,6 @@
+#!/bin/bash
+
+find . -name *.pyc | while read file
+do
+	rm "$file"
+done
