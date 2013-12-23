@@ -40,8 +40,7 @@ then
 	exit 1
 fi
 
-create_module "${new_module_name}" "${3}"
-
-cp "${source_file}" "${destiny_file}"
-
+cp "${source_file}" "${source_file}.bkp" 
 remove_module "${1}" "${2}"
+create_module "${new_module_name}" "${3}"
+mv "${source_file}.bkp" "${destiny_file}"
